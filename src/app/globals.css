@@ -1,0 +1,195 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+::selection {
+  background-color: #ffffff; /* Change to your desired background color */
+  color: white; /* Optional: Change the text color */
+}
+
+/* For older browsers (Firefox) */
+::-moz-selection {
+  background-color: #ffffff;
+  color: white;
+}
+:root {
+  --background: #ffffff;
+  --foreground: black;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #ffffff;
+    --foreground: black;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Inter;
+}
+
+.top-menu {
+  .top-bar {
+    background-color: #f4f5f7;
+    padding: 0;
+    margin: 0;
+  }
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: space-between;
+    padding: 0 240px;
+    width: 100%;
+    /* max-width: 1920px; */
+    margin: 0 auto;
+    height: 40px;
+  }
+
+  .left-menu,
+  .right-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 16px;
+  }
+
+  .right-menu {
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .left-menu li,
+  .right-menu li {
+    /* width: 73px; */
+    /* height: 20px; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #time {
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .fas {
+    margin-right: 5px;
+  }
+
+  /* Adaptive styling */
+  @media (max-width: 1200px) {
+    .wrapper {
+      padding: 0 120px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    .wrapper {
+      padding: 0 60px;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .wrapper {
+      padding: 0 20px;
+    }
+    .left-menu,
+    .right-menu {
+      flex-direction: column;
+      align-items: center;
+    }
+    .left-menu li,
+    .right-menu li {
+      width: 100%;
+    }
+  }
+
+
+}
+
+  .left-border {
+    border-left: 1px solid #dadfe7;
+    padding-left: 12px;
+  }
+  .ellipsis{
+         overflow:hidden;
+        text-overflow:ellipsis;
+        white-space:nowrap;
+  }
+/* Dropdown styling */
+.dropdown-wrapper {
+  .gray-text {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #6d727b;
+    
+  }
+
+  .bold-text {
+    font-family: Inter;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #000000;
+  }
+    .semi-bold-text {
+    font-family: Inter;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: 0%;
+    color: #000000;
+  }
+
+    .normal-text {
+    font-family: Inter;
+    /* font-weight: 500; */
+    font-size: 15px;
+    letter-spacing: 0%;
+    color: #2e2d2d;
+  }
+
+  .icon-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
+  .dropdown {
+    position: relative;
+  }
+
+  .dropdown-toggle {
+    cursor: pointer;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    display: none;
+    width: 100%;
+  }
+
+  .dropdown-menu li {
+    margin-bottom: 10px;
+  }
+
+  .dropdown-menu a {
+    text-decoration: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
+  }
+}

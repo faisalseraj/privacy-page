@@ -11,7 +11,7 @@ export type ServiceItem = {
 export const Dropdown = ({ title, items, textStyle }: ServiceItem) => {
   const menuStyle = textStyle === "grey" ? "grey-text" : "normal-text";
   return (
-    <ul className="dropdown-wrapper">
+    <div className="dropdown-wrapper">
       <li className="dropdown">
         <span className={`dropdown-toggle icon-flex ${textStyle}-text`}>
           {title}
@@ -29,6 +29,6 @@ export const Dropdown = ({ title, items, textStyle }: ServiceItem) => {
           })}
         </ul>
       </li>
-    </ul>
+    </div>
   );
 };

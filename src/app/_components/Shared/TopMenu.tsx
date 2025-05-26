@@ -1,5 +1,6 @@
 import { ArrowDownShortIcon, InboxIcon } from "@/app/_icons";
 
+import { Dropdown } from "./Dropdown";
 import React from "react";
 import { format } from "date-fns";
 
@@ -10,29 +11,15 @@ const TopMenu: React.FC = () => {
     <nav className="top-menu">
       <div className="wrapper">
         <ul className="left-menu">
-          <li className="dropdown">
-            <span className="dropdown-toggle gray-text icon-flex">
-              Company
-              <ArrowDownShortIcon />
-            </span>
-            <ul className="dropdown-menu">
-              <li>
-                <a href="#" className="gray-text">
-                  About Us
-                </a>
-              </li>
-              <li>
-                <a href="#" className="gray-text">
-                  Our Team
-                </a>
-              </li>
-              <li>
-                <a href="#" className="gray-text">
-                  Careers
-                </a>
-              </li>
-            </ul>
-          </li>
+          <Dropdown
+            title="Company"
+            textStyle="grey"
+            items={[
+              { text: "About Us", link: "#" },
+              { text: "Our Team", link: "#" },
+            ]}
+          />
+
           <li>
             <a href="#" className="gray-text">
               Downloads
@@ -65,4 +52,3 @@ const TopMenu: React.FC = () => {
 };
 
 export default TopMenu;
-

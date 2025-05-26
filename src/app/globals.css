@@ -119,8 +119,18 @@ body {
         text-overflow:ellipsis;
         white-space:nowrap;
   }
+
+    .icon-flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+  }
 /* Dropdown styling */
 .dropdown-wrapper {
+      display: flex;
+    align-items: center;
+
   .gray-text {
     font-family: Inter;
     font-weight: 500;
@@ -156,12 +166,6 @@ body {
     color: #2e2d2d;
   }
 
-  .icon-flex {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4px;
-  }
   .dropdown {
     position: relative;
   }
@@ -179,6 +183,7 @@ body {
     border: 1px solid #ddd;
     display: none;
     width: 100%;
+    z-index: 1;
   }
 
   .dropdown-menu li {

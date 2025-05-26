@@ -4,14 +4,13 @@ import { Box, Flex, HStack, Link, Text } from "@chakra-ui/react";
 
 const CopyrightBar = () => {
   return (
-    <Box
-      py={0.5}
+    <Flex
+      py={4}
       mx="96px"
       bg="white"
       px={{ base: 4, md: 8, lg: 16 }}
       justifyContent={{ base: "center", md: "space-between" }}
       alignItems="center"
-      direction={{ base: "column", md: "row" }}
       textAlign={{ base: "center", md: "left" }}
     >
       <HStack
@@ -25,7 +24,7 @@ const CopyrightBar = () => {
         <PolicyLinks />
       </HStack>
       <DesignedByText />
-    </Box>
+    </Flex>
   );
 };
 
